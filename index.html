@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Slider Promo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    * {
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #eee;
+}
+
+.slider {
+    width: 100%;
+    height: 70vh;
+    min-height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: right center;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* Left curved shape */
+.shape {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 55%;
+    height: 100%;
+    background: #1f3556b6;
+    border-radius: 0 333% 80% 0;
+}
+
+/* Text area */
+.left {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    color: white;
+    max-width: 400px;
+    z-index: 2;
+}
+
+.left h1 {
+    font-size: 6.5rem;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.left h2 {
+    font-size: 22px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    color: #4fd1ff;
+}
+
+.left p {
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.btn {
+    background: #4fd1ff;
+    color: #003;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+/* Promo badge */
+.badge {
+    position: absolute;
+    bottom: 15%;
+    left: 45%;
+    background: #4fd1ff;
+    color: white;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 30px;
+    font-weight: bold;
+    z-index: 3;
+}
+
+.badge span {
+    font-size: 42px;
+}
+.inayya{
+    display: flex;
+    gap: 0.2rem;
+    align-content: center;
+    justify-content: start;
+    font-size: 2rem;
+}
+.inayya::before{
+    align-self: center;
+    content: "";
+    width: 6.3rem;
+    height: 2px;
+    background: #003;
+}
+.inayya::after{
+    align-self: center;
+    content: "";
+    width: 6.3rem;
+    height: 2px;
+    background: #003;
+}
+.loubna img{
+    height: 3rem;
+}
+/* Responsive */
+@media(max-width: 900px) {
+    .shape {
+        width: 100%;
+        border-radius: 0;
+        opacity: 0.9;
+    }
+
+    .left {
+        left: 5%;
+    }
+
+    .badge {
+        left: auto;
+        right: 20px;
+    }
+}
+
+</style>
+<body>
+
+    <div class="slider">
+
+        <div class="slides">
+
+            <!-- SLIDE 1 -->
+            <div class="slide active" style="background-image:url('lux.png')">
+                <div class="shape"></div>
+
+                <div class="left">
+            <div class="loubna">
+                <h1> Promo</h1>
+                
+                <span class="inayya"><img src="https://inayya.re/wp-content/uploads/2022/01/logo-inayya-web.png"></span>
+            </div>
+                    <h2>Matelas Inayya Lux</h2>
+                    <p>Découvrez nos modèles luxueux pour un intérieur moderne et élégant.</p>
+                    <a href="#" class="btn">J'en profite</a>
+                </div>
+
+                <div class="badge">Jusqu’à<br><span>-35%</span></div>
+            </div>
+
+            <!-- SLIDE 2 -->
+            <div class="slide" style="background-image:url('confor.png')">
+                <div class="shape"></div>
+
+                <div class="left">
+                    <div class="loubna">
+                    <h1> Promo</h1>
+                    <span class="inayya"><img src="https://inayya.re/wp-content/uploads/2022/01/logo-inayya-web.png"></span>
+                    </div>
+                    
+                    <h2>Matelas Inayya Lux</h2>
+                    <p>Une ventilation silencieuse pour un bien-être total.</p>
+                    <a href="#" class="btn">J'en profite</a>
+                </div>
+
+                <div class="badge">Jusqu’à<br><span>-35%</span></div>
+            </div>
+
+            <!-- SLIDE 3 -->
+            <div class="slide" style="background-image:url('cooling.png')">
+                <div class="shape"></div>
+
+                <div class="left">
+            <div class="loubna">
+                <h1> Promo</h1>
+                <span class="inayya"><img src="https://inayya.re/wp-content/uploads/2022/01/logo-inayya-web.png"></span>
+            </div>
+                    <h2>Matelas Inayya Confort Plus</h2>
+                    <p>Puissance maximale pour un rafraîchissement immédiat.</p>
+                    <a href="#" class="btn">J'en profite</a>
+                </div>
+
+                <div class="badge">Jusqu’à<br><span>-25%</span></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script >
+        let slides = document.querySelectorAll(".slide");
+            let index = 0;
+
+            setInterval(() => {
+                slides[index].classList.remove("active");
+                index = (index + 1) % slides.length;
+                slides[index].classList.add("active");
+            }, 5000);
+
+    </script>
+</body>
+
+</html>
