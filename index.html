@@ -11,7 +11,14 @@
     box-sizing: border-box;
     font-family: "Segoe UI", sans-serif;
 }
-
+.et_pb_code_inner{
+background-color: #f95122;
+}
+.head{
+    padding: 1px;
+    background-color: #f95122;
+    margin-bottom: 3px;
+}
 body {
     margin: 0;
     background: #eee;
@@ -99,8 +106,8 @@ line-height: 1.5;
 /* Promo badge */
 .badge {
     position: absolute;
-   bottom: 6%;
-   left: 49%;
+    bottom: 6%;
+  left: 49%;
     background: #4fd1ff;
     color: white;
     width: 140px;
@@ -127,18 +134,103 @@ line-height: 1.5;
     content: "";
     width: 6.3rem;
     height: 2px;
-    background: #fff;
+    background: rgb(255, 255, 255);
 }
 .inayya::after{
     align-self: center;
     content: "";
     width: 6.3rem;
     height: 2px;
-    background: #fff;
+    background: rgb(255, 255, 255);
 }
 .loubna img{
     height: 3rem;
 }
+.inayya-header{
+  background:white;
+  border-bottom:1px solid #eee;
+  padding:15px 40px;
+  font-family:Arial, sans-serif;
+}
+
+.header-container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo img{
+  height:40px;
+}
+
+/* MENU */
+.main-nav{
+  display:flex;
+  gap:25px;
+}
+
+.main-nav a{
+  text-decoration:none;
+  color:#0a4a8f;
+  font-weight:600;
+  font-size:15px;
+  position:relative;
+}
+
+.main-nav a:hover{
+  color:#009fd9;
+}
+
+/* RIGHT SIDE */
+.right-actions{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+/* SEARCH */
+.search-box{
+  display:flex;
+  align-items:center;
+  border:2px solid #0a4a8f;
+  border-radius:30px;
+  padding:6px 15px;
+}
+
+.search-box input{
+  border:none;
+  outline:none;
+  font-size:14px;
+}
+
+.search-icon{
+  color:#0a4a8f;
+  margin-left:8px;
+}
+
+/* BUTTON */
+.catalogue-btn{
+  background:#00a5df;
+  border:none;
+  padding:10px 20px;
+  border-radius:25px;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.catalogue-btn:hover{
+  background:#007bb3;
+}
+
+/* RESPONSIVE */
+@media (max-width:1000px){
+  .main-nav{
+    display:none;
+  }
+}
+
 /* Responsive */
 @media(max-width: 900px) {
     .shape {
@@ -156,71 +248,356 @@ line-height: 1.5;
         right: 20px;
     }
 }
+/* cata */
+.inayya-catalog{
+  position: relative;
+   background:
+    linear-gradient(to right, rgba(10,74,143,0.85), rgba(0,159,217,0.85)),
+    url('cooling.jpeg');
+  text-align: center;
+  overflow: hidden;
+  color: white;
+  margin-top: 5rem;
+}
+
+/* vague blanche du haut */
+.catalog-wave{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:250px;
+  background:white;
+  border-radius:0 0 50% 50%;
+  z-index:1;
+}
+
+/* contenu */
+.catalog-inner{
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: auto;
+  bottom: 1rem;
+}
+
+.catalog-inner h2{
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #000;
+}
+
+/* carte catalogue */
+.catalog-box{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:20px;
+}
+
+.catalog-box img{
+  width:230px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  border-radius:6px;
+
+
+}
+
+/* bouton */
+.catalog-btn{
+  background:#ffffff;
+  color:#0a4a8f;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration:none;
+  transition:0.3s;
+  box-shadow:0 8px 25px rgba(0,0,0,0.3);
+}
+
+.catalog-btn:hover{
+  background:#009fd9;
+  color:white;
+}
+/* alma */
+.paylater-section{
+  padding: 60px 20px;
+}
+
+.paylater-container{
+  max-width: 1100px;
+  margin: auto;
+  background: #0a4a8f;
+  border-radius: 20px;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+
+/* LEFT */
+.paylater-left{
+  display: flex;
+  gap: 10rem;
+  flex-direction: row-reverse;
+}
+
+.paylater-left h2{
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.paylater-left span{
+  color: #ffffff;
+}
+
+.paylater-left img{
+ width: 55rem;
+}
+
+/* RIGHT */
+.paylater-right{
+    position: absolute;
+  background: #000000;
+  border-radius: 18px;
+ padding: 70px 16px;
+ min-width: 425px;
+}
+
+.paylater-right p{
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+ 
+  color: #ffffff;
+}
+
+.paylater-boxes{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.paybox{
+  background: #f95122;
+  padding: 18px 26px;
+  border-radius: 12px;
+  font-size: 1.8rem;
+  font-weight: 800;
+  box-shadow: 0 8px 25px rgba(0,159,217,0.5);
+}
+
+.paylater-sub{
+  font-size: 0.9rem;
+  color: #9ecfff;
+   text-align: center;
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .paylater-container{
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .paylater-left{
+    flex-direction: column;
+  }
+}
 
 </style>
 <body>
-
-    <div class="slider">
-
-        <div class="slides">
-
-            <!-- SLIDE 1 -->
-            <div class="slide active" style="background-image:url('lux.png')">
-                <div class="shape"></div>
-
-                <div class="left">
-            <div class="loubna">
-                <h1> Promo</h1>
-                
-                <span class="inayya"><img src="https://inayya.re/wp-content/uploads/2022/01/logo-inayya-web.png"></span>
+    <section class="head">
+        <div class="et_pb_module et_pb_code et_pb_code_0_tb_header">
+            <div class="et_pb_code_inner">
+                <h3 style="text-align: center; Color:#fff;font-family: Jost;">Payez jusqu'à 12x avec <img decoding="async"
+                        class="logo-alma-banner alignnone ls-is-cached lazyloaded" src="https://www.kitm.re/wp-content/uploads/2025/12/Logo-alma-1920x960-1-300x106-1.jpg" height="25"></h3>
             </div>
-                    <h2>Matelas Inayya Lux</h2>
-                    <p>Découvrez nos modèles luxueux pour un intérieur moderne et élégant.</p>
-                    <a href="#" class="btn">J'en profite</a>
+        </div>
+    </section>
+    <section class="menu">
+        <header class="inayya-header">
+            <div class="header-container">
+        
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="https://inayya.re/wp-content/uploads/2022/01/logo-inayya-web.png">
+                </div>
+        
+                <!-- Navigation -->
+                <nav class="main-nav">
+                    <a href="#">Accueil</a>
+        
+                    <div class="dropdown">
+                        <a href="#">Nos Matelas ▾</a>
+                    </div>
+        
+                    <div class="dropdown">
+                        <a href="#">Nos Packs ▾</a>
+                    </div>
+        
+                    <div class="dropdown">
+                        <a href="#">Nos Têtes de lit ▾</a>
+                    </div>
+        
+                    <div class="dropdown">
+                        <a href="#">Nos Lits ▾</a>
+                    </div>
+        
+                    <div class="dropdown">
+                        <a href="#">Nos Accessoires ▾</a>
+                    </div>
+        
+                    <a href="#">Blog</a>
+                    <a href="#">Contact</a>
+                </nav>
+        
+                <!-- Search + Button -->
+                <div class="right-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Recherche">
+                        <span class="search-icon">🔍</span>
+                    </div>
+        
+                    <button class="catalogue-btn">Catalogue</button>
+                </div>
+        
+            </div>
+        </header>
+
+    </section>
+
+    <section class="hero">
+        <div class="slider">
+
+            <div class="slides">
+
+                <!-- SLIDE 1 -->
+                <div class="slide active" style="background-image:url('lux.png')">
+                    <div class="shape"></div>
+
+                    <div class="left">
+                <div class="loubna">
+                    <h1> Promo</h1>
+                    
+                    <span class="inayya"><img src="https://inayya.re/wp-content/uploads/2022/01/logo-inayya-web.png"></span>
+                </div>
+                        <h2>Matelas Inayya Lux</h2>
+                        <p>Découvrez nos modèles luxueux pour un intérieur moderne et élégant.</p>
+                        <a href="#" class="btn">J'en profite</a>
+                    </div>
+
+                    <div class="badge">Jusqu’à<br><span>-35%</span></div>
                 </div>
 
-                <div class="badge">Jusqu’à<br><span>-35%</span></div>
-            </div>
+                <!-- SLIDE 2 -->
+                <div class="slide" style="background-image:url('confor.png')">
+                    <div class="shape"></div>
 
-            <!-- SLIDE 2 -->
-            <div class="slide" style="background-image:url('confor.png')">
-                <div class="shape"></div>
+                    <div class="left">
+                        <div class="loubna">
+                        <h1> Promo</h1>
+                        <span class="inayya"><img src="https://inayya.re/wp-content/uploads/2022/01/logo-inayya-web.png"></span>
+                        </div>
+                        
+                        <h2>Matelas Inayya Lux</h2>
+                        <p>Une ventilation silencieuse pour un bien-être total.</p>
+                        <a href="#" class="btn">J'en profite</a>
+                    </div>
 
-                <div class="left">
-                    <div class="loubna">
+                    <div class="badge">Jusqu’à<br><span>-35%</span></div>
+                </div>
+
+                <!-- SLIDE 3 -->
+                <div class="slide" style="background-image:url('cooling.jpeg')">
+                    <div class="shape"></div>
+
+                    <div class="left">
+                <div class="loubna">
                     <h1> Promo</h1>
                     <span class="inayya"><img src="https://inayya.re/wp-content/uploads/2022/01/logo-inayya-web.png"></span>
+                </div>
+                        <h2>Matelas Inayya Confort Plus</h2>
+                        <p>Puissance maximale pour un rafraîchissement immédiat.</p>
+                        <a href="#" class="btn">J'en profite</a>
                     </div>
-                    
-                    <h2>Matelas Inayya Lux</h2>
-                    <p>Une ventilation silencieuse pour un bien-être total.</p>
-                    <a href="#" class="btn">J'en profite</a>
+
+                    <div class="badge">Jusqu’à<br><span>-25%</span></div>
                 </div>
 
-                <div class="badge">Jusqu’à<br><span>-35%</span></div>
-            </div>
-
-            <!-- SLIDE 3 -->
-            <div class="slide" style="background-image:url('cooling.jpeg')">
-                <div class="shape"></div>
-
-                <div class="left">
-            <div class="loubna">
-                <h1> Promo</h1>
-                <span class="inayya"><img src="https://inayya.re/wp-content/uploads/2022/01/logo-inayya-web.png"></span>
-            </div>
-                    <h2>Matelas Inayya Confort Plus</h2>
-                    <p>Puissance maximale pour un rafraîchissement immédiat.</p>
-                    <a href="#" class="btn">J'en profite</a>
-                </div>
-
-                <div class="badge">Jusqu’à<br><span>-25%</span></div>
             </div>
 
         </div>
+    </section>
+
+    <section class="inayya-catalog">
+        <div class="catalog-wave"></div>
+
+        <div class="catalog-inner">
+            <h2>Nos catalogues du moment</h2>
+
+            <div class="catalog-box">
+                <img src="https://cfw51.rabbitloader.xyz/eyJjIjp0cnVlLCJoIjoiaW5heXlhLnJlIiwidiI6OTgyNTUwMzIsInIiOjEsImkiOiJjNzYyY2E3Yy0wYjliLTQyNzgtYjlkNC0zOWRmYzk2NGI1MDAifQ/wp-content/uploads/2025/12/Screenshot-2025-12-30-at-15-44-06-cata-inayya-301225-c-cata-inayya-301225-c.pdf.png" alt="Catalogue Inayya">
+                <a href="#" class="catalog-btn">Commencez vos achats !</a>
+            </div>
+        </div>
+    </section>
+
+
+<section class="paylater-section">
+    <div class="paylater-container">
+
+        <!-- Left side -->
+        <div class="paylater-left">
+           
+            <img src="girl.png" alt="Client satisfait">
+             <div class="paylater-right">
+            <p>Réglez vos achats en</p>
+
+            <div class="paylater-boxes">
+                <div class="paybox">3x</div>
+                <div class="paybox">4x</div>
+                <div class="paybox">6x</div>
+                <div class="paybox">12x</div>
+            </div>
+
+            <span class="paylater-sub">à partir de 150€ d’achats</span>
+        </div>
+        </div>
+
+        <!-- Right side -->
+       
 
     </div>
+</section>
 
+
+    <section class="fedilite">
+
+    </section>
+
+    <section class="why-inayya">
+
+    </section>
+
+    <section class="produits">
+
+    </section>
+
+    <section class="blog">
+
+    </section>
+
+    <section class="avis">
+
+    </section>
+    
     <script >
         let slides = document.querySelectorAll(".slide");
             let index = 0;
@@ -234,6 +611,4 @@ line-height: 1.5;
     </script>
 </body>
 
-
 </html>
-
