@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Slider Promo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 <style>
@@ -297,7 +298,7 @@ line-height: 1.5;
 }
 
 .catalog-box img{
-  width:375px;
+  width:260px;
   box-shadow: 0 15px 30px rgba(0,0,0,0.3);
   border-radius:6px;
 
@@ -314,6 +315,7 @@ line-height: 1.5;
   text-decoration:none;
   transition:0.3s;
   box-shadow:0 8px 25px rgba(0,0,0,0.3);
+ 
 }
 
 .catalog-btn:hover{
@@ -321,85 +323,14 @@ line-height: 1.5;
   color:white;
 }
 /* alma */
-.paylater-section{
-  padding: 60px 20px;
-}
 
-.paylater-container{
-  max-width: 1100px;
-  margin: auto;
-  background: #0a4a8f;
-  border-radius: 20px;
-  padding: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: white;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
-}
-
-/* LEFT */
-.paylater-left{
-  display: flex;
-  gap: 10rem;
-  flex-direction: row-reverse;
-}
-
-.paylater-left h2{
-  font-size: 2.4rem;
-  font-weight: 800;
-  line-height: 1.1;
-  text-align: center;
-}
-
-.paylater-left span{
-  color: #ffffff;
-}
-
-.paylater-left img{
- width: 55rem;
-}
-
-/* RIGHT */
-.paylater-right{
-    position: absolute;
-  background: #000000;
-  border-radius: 18px;
- padding: 70px 16px;
- min-width: 425px;
-}
-
-.paylater-right p{
-  margin-bottom: 15px;
-  font-size: 1.1rem;
- 
-  color: #ffffff;
-}
-
-.paylater-boxes{
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin: 20px 0;
-}
-
-.paybox{
-  background: #f95122;
-  padding: 18px 26px;
-  border-radius: 12px;
-  font-size: 1.8rem;
-  font-weight: 800;
-  box-shadow: 0 8px 25px rgba(0,159,217,0.5);
-}
-
-.paylater-sub{
-  font-size: 0.9rem;
-  color: #9ecfff;
-   text-align: center;
-}
 
 /* Responsive */
 @media(max-width:900px){
+    .promo-container{
+        flex-direction: column;
+        margin: 1rem !important;
+    }
   .paylater-container{
     flex-direction: column;
     gap: 30px;
@@ -409,6 +340,98 @@ line-height: 1.5;
   .paylater-left{
     flex-direction: column;
   }
+}
+
+/* alma */
+
+
+.promo-container {
+
+  background: linear-gradient(90deg, #118fc5, #ff9800);
+  border-radius: 15px;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-content: center;
+margin: 6rem;
+}
+
+/* LEFT */
+.promo-left {
+    flex: 2.2;
+    position: relative;
+    padding: 50px;
+    color: black;
+}
+
+.promo-left h1 {
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.promo-left h1 span {
+    color: white;
+}
+
+.woman {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    height: 260px;
+}
+
+/* RIGHT */
+.promo-right {
+    flex: 1;
+    background: black;
+    border-radius: 12px;
+    margin: 20px;
+    padding: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.boxes {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.box {
+    width: 65px;
+    height: 65px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.red {
+    background: #e53935;
+}
+
+.dark {
+    background: #333;
+}
+
+.sub {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.small {
+    font-size: 10px;
+    opacity: 0.6;
 }
 
 </style>
@@ -551,29 +574,36 @@ line-height: 1.5;
 
 
 <section class="paylater-section">
-    <div class="paylater-container">
-
-        <!-- Left side -->
-        <div class="paylater-left">
-           
-            <img src="girl.png" alt="Client satisfait">
-             <div class="paylater-right">
-            <p>Réglez vos achats en</p>
-
-            <div class="paylater-boxes">
-                <div class="paybox">3x</div>
-                <div class="paybox">4x</div>
-                <div class="paybox">6x</div>
-                <div class="paybox">12x</div>
-            </div>
-
-            <span class="paylater-sub">à partir de 150€ d’achats</span>
+    <div class="promo-container">
+    
+    <!-- LEFT -->
+    <div class="promo-left">
+        <h1>
+            Achetez maintenant, <br>
+            <span>payez plus tard.</span>
+        </h1>
+        <img src="girl.png" class="woman">
+    </div>
+    
+    <!-- RIGHT -->
+    <div class="promo-right">
+        <p class="title">Réglez vos achats en</p>
+    
+        <div class="boxes">
+            <div class="box red">3x</div>
+            <div class="box red">4x</div>
+            <div class="box red">10x</div>
+            <div class="box dark">ou</div>
+            <div class="box red">12x</div>
         </div>
-        </div>
-
-        <!-- Right side -->
-       
-
+    
+        <p class="sub">à partir de 150€ d’achats</p>
+    
+        <p class="small">
+            Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.
+        </p>
+    </div>
+    
     </div>
 </section>
 
@@ -612,5 +642,3 @@ line-height: 1.5;
 </body>
 
 </html>
-
-
